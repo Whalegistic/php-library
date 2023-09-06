@@ -1,0 +1,22 @@
+{
+    "name": "whalegistic/whalegistic",
+    "description": "Whalegistic is a E-Commerce platform and this package is the connection between Whalegistic platform API and users websites",
+    "type": "library",
+    "require": {
+        "firebase/php-jwt": "^6.8",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Whalegistic\\Whalegistic\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Whalegistic",
+            "email": "info@whalegistic.com"
+        }
+    ],
+    "minimum-stability": "alpha"
+}
