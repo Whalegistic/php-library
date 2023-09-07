@@ -2,10 +2,10 @@
 
 namespace Whalegistic\API;
 
-use \GuzzleHttp\Client;
-use \GuzzleHttp\Promise\Utils;
-use \Firebase\JWT\JWT;
-use \Firebase\JWT\Key;
+use GuzzleHttp\Client;
+use GuzzleHttp\Promise\Utils;
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
 
 class Whalegistic{
 	
