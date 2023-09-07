@@ -1,5 +1,5 @@
 {
-    "name": "whalegistic/whalegistic",
+    "name": "whalegistic/api",
     "description": "Whalegistic is a E-Commerce platform and this package is the connection between Whalegistic platform API and users websites",
     "type": "library",
     "require": {
@@ -9,7 +9,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Whalegistic\\Whalegistic\\": "src/"
+            "Whalegistic\\API\\": "src"
         }
     },
     "authors": [
@@ -17,6 +17,5 @@
             "name": "Whalegistic",
             "email": "info@whalegistic.com"
         }
-    ],
-    "minimum-stability": "alpha"
+    ]
 }
