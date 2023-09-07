@@ -1,6 +1,6 @@
 <?php
 
-namespace Whalegistic\Whalegistic;
+namespace Whalegistic\API;
 
 use \GuzzleHttp\Client;
 use \GuzzleHttp\Promise\Utils;
