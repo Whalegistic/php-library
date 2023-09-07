@@ -1,3 +1,4 @@
+
 <?php
 
 namespace Whalegistic\API;
@@ -18,7 +19,7 @@ class Whalegistic{
         $this->pub_key = $pk;
         $this->pri_key = $sk;
 
-        $this->client = new GuzzleHttp\Client();
+        $this->client = new Client();
 
         $payload = [
         	"public_key" => $pk
@@ -151,8 +152,8 @@ class Whalegistic{
 
 		$promises = [$products_obj, $brands_obj, $categories_obj, $collections_obj];
 
-		$results = GuzzleHttp\Promise\Utils::settle(
-		    GuzzleHttp\Promise\Utils::unwrap($promises),
+		$results = Utils::settle(
+		    Utils::unwrap($promises),
 		)->wait();
 
 		$products_obj = json_decode($results[0]['value']->getBody()->getContents(), true);
@@ -394,8 +395,8 @@ class Whalegistic{
 
 		$promises = [$client_obj, $client_orders_obj];
 
-		$results = GuzzleHttp\Promise\Utils::settle(
-		    GuzzleHttp\Promise\Utils::unwrap($promises),
+		$results = Utils::settle(
+		    Utils::unwrap($promises),
 		)->wait();
 
 		$client_obj = json_decode($results[0]['value']->getBody()->getContents(), true);
