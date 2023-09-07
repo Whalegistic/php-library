@@ -1,5 +1,7 @@
 <?php
 
+namespace Whalegistic\Whalegistic;
+
 use \GuzzleHttp\Client;
 use \GuzzleHttp\Promise\Utils;
 use \Firebase\JWT\JWT;
