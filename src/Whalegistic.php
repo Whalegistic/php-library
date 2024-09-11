@@ -264,7 +264,31 @@ class Whalegistic{
 
 		$products_obj = json_decode(((string) $products_obj->getBody()), true);
 
-	    return $products_obj['products'][0];
+	    return $products_obj['product'];
+
+	}
+
+	public function getGroupProduct($send_obj){
+
+		if($send_obj == null) $send_obj = [];
+
+		$send_obj["public_key"] = $this->pub_key;
+
+	    $products_obj = $this->client->request(
+			'POST', 
+			'https://whalegistic.com/api/get-group-product', 
+			[
+				'headers' => [
+					'Content-Type' => 'application/json',
+		        	'Authorization' => 'Bearer ' . $this->token
+				],
+				'json' => $send_obj
+			]
+		);
+
+		$products_obj = json_decode(((string) $products_obj->getBody()), true);
+
+	    return $products_obj['group_product'];
 
 	}
 
